@@ -41,7 +41,6 @@ export default defineConfig([
     ignores: [
       '**/dist*',
       '**/*.d.ts',
-      'website/*',
       'node_modules/*',
       'eslint.config.mjs',
       '**/jest.config.ts',
