@@ -1,7 +1,7 @@
 import request from 'supertest';
 import { TestApplication } from '@ditsmod/testing';
 import { Providers, Status } from '@ditsmod/core';
-import { HttpServer } from '@ditsmod/rest';
+import type { HttpServer } from '@ditsmod/rest';
 import { BodyParserConfig } from '@ditsmod/body-parser';
 import { jest } from '@jest/globals';
 
