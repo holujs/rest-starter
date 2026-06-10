@@ -1,20 +1,19 @@
 import { HTTP_BODY } from '@ditsmod/body-parser';
 import { ctx } from '@ditsmod/core';
-import { controller, Res, route } from '@ditsmod/rest';
+import { controller, route } from '@ditsmod/rest';
 
 import { SomeService } from './some.service.js';
 
 @controller()
-export class InjScopedController {
+export class RequestScopedController {
   @route('GET', 'hello')
-  tellHello(res: Res, someService: SomeService) {
-    const msg = someService.getMsg();
-    res.send(msg);
+  tellHello(someService: SomeService) {
+    return someService.getMsg();
   }
 
   @route('POST', 'body')
-  postHello(res: Res, @ctx(HTTP_BODY) body: any) {
-    res.sendJson(body);
+  postHello(@ctx(HTTP_BODY) body: any) {
+    return body;
   }
 
   @route('GET', 'throw-error')

@@ -1,19 +1,18 @@
 import { controller, RequestContext, route } from '@ditsmod/rest';
 import { SomeService } from './some.service.js';
 
-@controller({ scope: 'ctx' })
-export class CtxScopedController {
+@controller({ scope: 'route' })
+export class RouteScopedController {
   constructor(private someService: SomeService) {}
 
   @route('GET', 'hello2')
-  tellHello(ctx: RequestContext) {
-    const msg = this.someService.getMsg();
-    ctx.send(msg);
+  tellHello() {
+    return this.someService.getMsg();
   }
 
   @route('POST', 'body2')
   postHello(ctx: RequestContext) {
-    ctx.sendJson(ctx.body);
+    return ctx.body;
   }
 
   @route('GET', 'throw-error2')
