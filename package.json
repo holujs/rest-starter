@@ -9,7 +9,7 @@
     "node-watch": "node --watch --enable-source-maps dist/main.js",
     "start:dev": "run-p 'build -- --watch' node-watch",
     "build-test": "tsc -b tsconfig.e2e.json --watch",
-    "test": "tsc -b tsconfig.e2e.json && npm run esm-jest",
+    "test": "tsc -b tsconfig.e2e.json && npm run esm-jest --",
     "esm-jest": "node --experimental-vm-modules --no-warnings=ExperimentalWarning --enable-source-maps node_modules/jest/bin/jest.js",
     "lint": "eslint .",
     "clean": "rimraf dist*"
