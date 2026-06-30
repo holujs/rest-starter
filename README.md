@@ -4,14 +4,6 @@ This is [Ditsmod](https://github.com/ditsmod/ditsmod) starter.
 
 ## Usage
 
-From first terminal:
-
-```bash
-git clone --depth 1 https://github.com/ditsmod/starter.git my-app
-cd my-app
-npm i
-```
-
 Start in development mode:
 
 ```bash
@@ -51,3 +43,29 @@ curl -i localhost:3000/api/body2 -d '{"one":1}' -H 'content-type: application/js
 ## Example
 
 You can see more example usage in [ditsmod repository](https://github.com/ditsmod/ditsmod/tree/main/examples)
+
+### Add `AGENTS.md` and `SKILL.md` for AI agents {#add-agent-skills}
+
+The file [AGENTS.md][1] is intended for AI agents and should be placed in the root directory of the repository. This file will be taken into account by the AI agent every time you interact with the agent. To copy the latest version of `AGENTS.md`, run the following command:
+
+```bash
+cd my-app # Go to starter repository
+npm run setup:agents
+```
+
+Additionally, you can install [AI agent skills][2] to help them better understand the specifics of Ditsmod applications:
+
+```bash
+npx skills add ditsmod/agent-skills
+```
+
+This command will let you choose from all available skills. If you already know which skill you need, you can install it like this:
+
+```bash
+npx skills add ditsmod/agent-skills --skill ditsmod-module-composition
+```
+
+AI agent skills are only loaded when needed, when you ask something relevant to them.
+
+[1]: https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md
+[2]: https://agentskills.io/home
