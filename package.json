@@ -22,7 +22,7 @@
   "author": "Your Name Here",
   "license": "MIT",
   "engines": {
-    "node": ">= 20.6.0"
+    "node": ">= 24.0.0"
   },
   "dependencies": {
     "@ditsmod/body-parser": "^3.0.0-next.13",
