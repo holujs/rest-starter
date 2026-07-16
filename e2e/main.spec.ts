@@ -1,6 +1,6 @@
 import request from 'supertest';
 import { TestRestApplication } from '@ditsmod/rest-testing';
-import { Providers, Status } from '@ditsmod/core';
+import { ProviderBuilder, HttpStatus } from '@ditsmod/core';
 import type { HttpServer } from '@ditsmod/rest';
 import { BodyParserConfig } from '@ditsmod/body-parser';
 import { jest } from '@jest/globals';
@@ -13,7 +13,7 @@ describe('Integration tests for HelloWorldController', () => {
 
   beforeAll(async () => {
     jest.restoreAllMocks();
-    const providers = new Providers().useValue<BodyParserConfig>(BodyParserConfig, { jsonOptions: { limit: '9b' } });
+    const providers = new ProviderBuilder().useValue<BodyParserConfig>(BodyParserConfig, { jsonOptions: { limit: '9b' } });
 
     server = await TestRestApplication.createTestApp(AppModule, { path: 'api' }).overrideModuleMeta([...providers]).getServer();
     testAgent = request(server);
@@ -32,11 +32,11 @@ describe('Integration tests for HelloWorldController', () => {
   });
 
   it('should throws an error when the set request body limit is exceeded', async () => {
-    await testAgent.post('/api/body').send({ one: 1, two: 2 }).expect(Status.PAYLOAD_TO_LARGE);
+    await testAgent.post('/api/body').send({ one: 1, two: 2 }).expect(HttpStatus.PAYLOAD_TO_LARGE);
   });
 
   it('should throw an error', async () => {
-    await testAgent.get('/api/throw-error').expect(Status.INTERNAL_SERVER_ERROR);
+    await testAgent.get('/api/throw-error').expect(HttpStatus.INTERNAL_SERVER_ERROR);
   });
 
   it('context-scoped controller works', async () => {
@@ -48,10 +48,10 @@ describe('Integration tests for HelloWorldController', () => {
   });
 
   it('singleton should throws an error when the set request body limit is exceeded', async () => {
-    await testAgent.post('/api/body2').send({ one: 1, two: 2 }).expect(Status.PAYLOAD_TO_LARGE);
+    await testAgent.post('/api/body2').send({ one: 1, two: 2 }).expect(HttpStatus.PAYLOAD_TO_LARGE);
   });
 
   it('context-scoped controller should throw an error', async () => {
-    await testAgent.get('/api/throw-error2').expect(Status.INTERNAL_SERVER_ERROR);
+    await testAgent.get('/api/throw-error2').expect(HttpStatus.INTERNAL_SERVER_ERROR);
   });
 });
