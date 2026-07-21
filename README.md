@@ -44,7 +44,7 @@ curl -i localhost:3000/api/body2 -d '{"one":1}' -H 'content-type: application/js
 
 You can see more example usage in [ditsmod repository](https://github.com/ditsmod/ditsmod/tree/main/examples)
 
-### Add `AGENTS.md` and `SKILL.md` for AI agents {#add-agent-skills}
+### Add `AGENTS.md` and `SKILL.md` for AI agents
 
 The file [AGENTS.md][1] is intended for AI agents and should be placed in the root directory of the repository. This file will be taken into account by the AI agent every time you interact with the agent. To copy the latest version of `AGENTS.md`, run the following command:
 
