@@ -11,7 +11,7 @@
       "command": "npm run start",
       "request": "launch",
       "outFiles": [
-        "${workspaceFolder}/node_modules/@ditsmod/**/*.js",
+        "${workspaceFolder}/node_modules/@holu/**/*.js",
         "${workspaceFolder}/src/**/*.js"
       ],
       "type": "node-terminal"
@@ -24,7 +24,7 @@
       "args": ["--runInBand"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "outFiles": ["${workspaceFolder}/node_modules/@ditsmod/**/*.js"],
+      "outFiles": ["${workspaceFolder}/node_modules/@holu/**/*.js"],
       "windows": {
         "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       }
@@ -41,7 +41,7 @@
       ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "outFiles": ["${workspaceFolder}/node_modules/@ditsmod/**/*.js"],
+      "outFiles": ["${workspaceFolder}/node_modules/@holu/**/*.js"],
       "windows": {
         "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       }

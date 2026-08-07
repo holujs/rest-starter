@@ -1,6 +1,6 @@
 ## Description
 
-This is [Ditsmod](https://github.com/ditsmod/ditsmod) starter.
+This is [Holu](https://github.com/holujs/holu) starter.
 
 ## Usage
 
@@ -42,7 +42,7 @@ curl -i localhost:3000/api/body2 -d '{"one":1}' -H 'content-type: application/js
 
 ## Example
 
-You can see more example usage in [ditsmod repository](https://github.com/ditsmod/ditsmod/tree/main/examples)
+You can see more example usage in [holu repository](https://github.com/holujs/holu/tree/main/examples)
 
 ### Add `AGENTS.md` and `SKILL.md` for AI agents
 
@@ -52,14 +52,14 @@ The file [AGENTS.md][1] is intended for AI agents and should be placed in the ro
 npm run setup:agents
 ```
 
-Additionally, you can install [AI agent skills][2] to help them better understand the specifics of Ditsmod applications:
+Additionally, you can install [AI agent skills][2] to help them better understand the specifics of Holu applications:
 
 ```bash
-npx skills add ditsmod/agent-skills --skill '*' -y
+npx skills add holu/agent-skills --skill '*' -y
 ```
 
 AI agent skills are only loaded when needed, when you ask something relevant to them.
 
-[1]: https://github.com/ditsmod/agent-skills/blob/main/AGENTS.md
-[2]: https://github.com/ditsmod/agent-skills/tree/main
+[1]: https://github.com/holujs/agent-skills/blob/main/AGENTS.md
+[2]: https://github.com/holujs/agent-skills/tree/main
 

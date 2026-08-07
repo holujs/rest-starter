@@ -1,4 +1,4 @@
-import { controller, RequestContext, route } from '@ditsmod/rest';
+import { controller, RequestContext, route } from '@holu/rest';
 import { SomeService } from './some.service.js';
 
 @controller({ scope: 'route' })

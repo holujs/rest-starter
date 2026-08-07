@@ -1,6 +1,6 @@
-import { HTTP_BODY } from '@ditsmod/body-parser';
-import { ctx } from '@ditsmod/core';
-import { controller, route } from '@ditsmod/rest';
+import { HTTP_BODY } from '@holu/body-parser';
+import { ctx } from '@holu/core';
+import { controller, route } from '@holu/rest';
 
 import { SomeService } from './some.service.js';
 

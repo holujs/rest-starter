@@ -1,4 +1,4 @@
-import { Injector } from '@ditsmod/core';
+import { Injector } from '@holu/core';
 
 import { RequestScopedController } from './request-scoped.controller.js';
 import { SomeService } from './some.service.js';

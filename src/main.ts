@@ -1,5 +1,5 @@
 import type { ServerOptions } from 'node:http';
-import { RestApplication } from '@ditsmod/rest';
+import { RestApplication } from '@holu/rest';
 
 import { AppModule } from './app/app.module.js';
 import { checkCliAndSetPort } from './app/utils/check-cli-and-set-port.js';

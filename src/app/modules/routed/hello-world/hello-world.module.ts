@@ -1,4 +1,4 @@
-import { restModule } from '@ditsmod/rest';
+import { restModule } from '@holu/rest';
 
 import { RequestScopedController } from './request-scoped.controller.js';
 import { RouteScopedController } from './route-scoped.controller.js';
