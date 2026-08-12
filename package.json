@@ -25,14 +25,14 @@
     "node": ">= 24.0.0"
   },
   "dependencies": {
-    "@holu/body-parser": "^0.2.1",
-    "@holu/core": "^0.2.1",
-    "@holu/rest": "^0.2.1"
+    "@holu/body-parser": "^0.2.2",
+    "@holu/core": "^0.2.2",
+    "@holu/rest": "^0.2.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@holu/cli": "^0.2.1",
-    "@holu/rest-testing": "^0.2.1",
+    "@holu/cli": "^0.2.2",
+    "@holu/rest-testing": "^0.2.2",
     "@types/jest": "^30.0.0",
     "@types/node": "^20.19.43",
     "@types/supertest": "^6.0.3",
